@@ -84,7 +84,7 @@
 
   <div class="row">
     <% @place.comments.each do |comment| %>
-      <div class="col-12 col-sm-6 offset-1">
+      <div class="col-10 offset-1 col-sm-4 ">
         <blockquote>
           <% if comment.humanized_rating.present? %>
             <b><%= comment.humanized_rating %></b> -
@@ -107,15 +107,18 @@
   <div class="clear"></div>
 
   <br />
- 
-  <div class="row">
-    <% @place.photos.each do |photo| %>
-      <div class="col-10 offset-1">
-        <%= image_tag photo.picture %><br/>
-        <%= photo.caption %><br/><br/>
-      </div>      
-    <% end %>
-  </div>
+  
+    <div class="row">
+      <% @place.photos.each do |photo| %>        
+        <div class="offset-1 col-sm-5 ">                            
+            <%= image_tag photo.picture, class: 'img-fluid img-thumbnail' %><br/>    
+            <div class="text-center caption">
+              <%= photo.caption %><br/><br/> 
+            </div>     
+        </div>                     
+      <% end %>      
+    </div>
+  
 
     <!-- Modal -->
   <div class="modal fade" id="PictureModal" tabindex="-1" role="dialog" aria-labelledby="PictureModalLabel" aria-hidden="true">
