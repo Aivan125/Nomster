@@ -33,10 +33,12 @@
 
   <% @places.each do |place| %>
   <div class="booyah-box col-10 offset-1">     
-    <div class="row">                 
+    <div class="row">
+                     
       <% if place.photos.present? %>        
         <%= image_tag place.photos.last.picture, class: 'index_image' %>
-      <% end %>      
+      <% end %>
+         
     
       <div class="offset-1 float-right">
         <h1><%= link_to place.name, place_path(place) %></h1><br />
