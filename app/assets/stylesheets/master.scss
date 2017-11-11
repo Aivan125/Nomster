@@ -47,6 +47,9 @@ body {
   justify-content: center;
   padding: 8px 16px;
 }
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
+}
 
 .help-block {
   color: #ff3333;
@@ -114,7 +117,9 @@ blockquote p {
   width: 50%;
 }
 
-.index_image {
+.photo-box {
   height: 250px;
-  width: 25%;
+  width: 250px;
+   
+  
 }
